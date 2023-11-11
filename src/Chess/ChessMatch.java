@@ -2,7 +2,11 @@ package Chess;
 
 import Boardgame.Board;
 import Boardgame.Posição;
+import chessPeças.Bispo;
+import chessPeças.Horse;
 import chessPeças.King;
+import chessPeças.Peão;
+import chessPeças.Queen;
 import chessPeças.Rock;
 
 public class ChessMatch {
@@ -25,7 +29,30 @@ public class ChessMatch {
 	}
 	
 	private void inicialSetup() {
-		board.placePeça(new Rock(board, Color.WHITE), new Posição(2,2));
-		board.placePeça(new King(board, Color.WHITE), new Posição(2,1));
+		board.placePeça(new King(board, Color.WHITE), new Posição(7,4));
+		board.placePeça(new Queen(board, Color.WHITE), new Posição(7,3));
+		board.placePeça(new Rock(board, Color.WHITE), new Posição(7,0));
+		board.placePeça(new Bispo(board, Color.WHITE), new Posição(7,2));
+		board.placePeça(new Horse(board, Color.WHITE), new Posição(7,1));
+		board.placePeça(new Rock(board, Color.WHITE), new Posição(7,7));
+		board.placePeça(new Bispo(board, Color.WHITE), new Posição(7,5));
+		board.placePeça(new Horse(board, Color.WHITE), new Posição(7,6));
+		
+		for(int i=0;i<8;i++) {
+		board.placePeça(new Peão(board, Color.WHITE), new Posição(6,i));
+		}
+		
+		board.placePeça(new King(board, Color.WHITE), new Posição(0,4));
+		board.placePeça(new Queen(board, Color.WHITE), new Posição(0,3));
+		board.placePeça(new Bispo(board, Color.WHITE), new Posição(0,2));
+		board.placePeça(new Horse(board, Color.WHITE), new Posição(0,1));
+		board.placePeça(new Rock(board, Color.WHITE), new Posição(0,0));
+		board.placePeça(new Bispo(board, Color.WHITE), new Posição(0,5));
+		board.placePeça(new Horse(board, Color.WHITE), new Posição(0,6));
+		board.placePeça(new Rock(board, Color.WHITE), new Posição(0,7));
+		
+		for(int i=0;i<8;i++) {
+		board.placePeça(new Peão(board, Color.WHITE), new Posição(1,i));
+		}
 	}
 }
